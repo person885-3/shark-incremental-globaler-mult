@@ -246,7 +246,7 @@ function reloadOres() {
             if (mf.mod(1).gt(Math.random())) fortune = fortune.add(1)
 
             health = Decimal.mul(p,10).mul(oo.dense??1).mul(h_inc).round()
-            value = Decimal.pow(2,fortune).mul(Decimal.mul(p,oo.mult??1)..mul(tmp.global_mult).round())
+            value = Decimal.pow(2,fortune).mul(Decimal.mul(p,oo.mult??1).mul(tmp.global_mult).round())
         }
 
         var o = {
