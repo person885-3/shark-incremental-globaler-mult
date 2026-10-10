@@ -33,8 +33,8 @@ const REBIRTH = {
 
             if (next) {
                 player.rebirth.first = true;
-                player.rebirth.points = player.rebirth.points.add(tmp.global_mult);
-                player.rebirth.total = player.rebirth.total.add(tmp.global_mult);
+                player.rebirth.points = player.rebirth.points.add(this.calculateGlobalMult()[0]);
+                player.rebirth.total = player.rebirth.total.add(this.calculateGlobalMult()[0]);
                 player.rebirth.best = Math.min(player.rebirth.best, player.timePlayed)
 
                 player.rebirth.past10.push([player.timePlayed, E(1)])
