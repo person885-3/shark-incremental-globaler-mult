@@ -5,7 +5,7 @@ const CONSTELLATION = {
     },
 
     get base() {
-        let x = player.fish.add(10).iteratedlog(10,2).mul(CURRENCIES.remnants.amount.add(1).log10()).mul(CURRENCIES["dark-matter"].amount.add(1).log10())
+        let x = player.fish.add(10).iteratedlog(10,2).mul(CURRENCIES.remnants.amount.add(1).log10()).mul(CURRENCIES["dark-matter"].amount.add(1).log10()).mul(tmp.global_mult)
 
         return x.pow(this.exp)
     },
@@ -33,7 +33,7 @@ const CONSTELLATION = {
 
         for (let i = 0; i < 4; i++) x = Decimal.mul(x,simpleCETEffect(40+i));
 
-        x = x.mul(getNucleobaseEffect('cytosine',0))
+        x = x.mul(getNucleobaseEffect('cytosine',0)).mul(tmp.global_mult)
 
         x = x.pow(getNucleobaseEffect('cytosine',3)).pow(galacticExplorationEffect(4))
 
