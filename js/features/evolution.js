@@ -275,6 +275,7 @@ function getFaithMultiplier() {
     let x = 1
     if (isSSObserved('uranus')) x *= 2;
     if (isSSObserved('sun')) x *= 2;
+    x *= tmp.global_mult
     return x
 }
 
