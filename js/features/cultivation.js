@@ -237,7 +237,7 @@ function reloadOres() {
             if (smf.mod(1).gt(Math.random())) fortune = fortune.add(1)
 
             health = Decimal.mul(p,10).mul(oo.dense??1).mul(h2_inc).round()
-            value = Decimal.pow(2,fortune).mul(Decimal.mul(p,oo.mult??1).round())
+            value = Decimal.pow(2,fortune).mul(Decimal.mul(p,oo.mult??1).mul(tmp.global_mult).round())
         } else {
             name = ORE_KEYS[Math.min(ORE_KEYS.length-1, tmp.ore_spawn_base, tmp.ore_generator+Math.floor(Math.logBase(Math.random(), 1/3)))]
             oo = ORES[name]
@@ -246,7 +246,7 @@ function reloadOres() {
             if (mf.mod(1).gt(Math.random())) fortune = fortune.add(1)
 
             health = Decimal.mul(p,10).mul(oo.dense??1).mul(h_inc).round()
-            value = Decimal.pow(2,fortune).mul(Decimal.mul(p,oo.mult??1).round())
+            value = Decimal.pow(2,fortune).mul(Decimal.mul(p,oo.mult??1)..mul(tmp.global_mult).round())
         }
 
         var o = {
