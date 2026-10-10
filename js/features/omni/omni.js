@@ -764,7 +764,7 @@ RESETS.reaction = {
 }
 
 function calculateGameSpeed() {
-    let x = Decimal.mul(tmp.omni.particles_effect[1], getCondenserBonus(1))
+    let x = Decimal.mul(tmp.omni.particles_effect[1], getCondenserBonus(1))tmp.global_mult
 
     if (!RUNE_SACRIFICE.in(-1)) x = x.max(10).log10();
 
