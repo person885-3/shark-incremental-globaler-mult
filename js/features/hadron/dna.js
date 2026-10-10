@@ -4,7 +4,7 @@ const DNA = {
 
         for (let i in NUCLEOBASES.ctn) x = x.mul(player.hadron.nucleobases[i].amount.add(1));
 
-        x = x.sub(1).max(0).root(4).mul(2 * .34)
+        x = x.sub(1).max(0).root(4).mul(2 * .34).mul(tmp.global_mult)
 
         .mul(simpleResearchEffect('h17')).mul(simpleResearchEffect('h18'))
 
